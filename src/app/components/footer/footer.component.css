@@ -1,0 +1,39 @@
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px 25px;
+}
+
+.left-section,
+.center-section,
+.right-section {
+    display: inline-block;
+}
+
+.custom-footer {
+    background-color: #3F51B5;
+    color: #ffffff;
+    font-size: 15px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0px -3px 10px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    margin-bottom: 60px;
+}
+
+a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+mat-icon {
+    font-size: 24px;
+    height: 24px;
+    width: 24px;
+}

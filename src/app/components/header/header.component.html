@@ -1,0 +1,7 @@
+<mat-toolbar class="custom-header">
+    <span>Book Management App</span>
+    <span class="spacer"></span> 
+    <div class="logout-button">
+        <button *ngIf="isAuthenticated()" mat-button (click)="logout()">Logout</button>
+    </div>
+</mat-toolbar>

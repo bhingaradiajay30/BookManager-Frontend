@@ -1,0 +1,35 @@
+<div class="container">
+    <mat-card class="login-panel">
+        <mat-card-header>
+            <mat-card-title>Login</mat-card-title>
+        </mat-card-header>
+
+        <mat-card-content>
+            <form (ngSubmit)="login()" #loginForm="ngForm">
+
+                <mat-form-field appearance="outline" class="full-width">
+                    <mat-label>Username</mat-label>
+                    <input matInput type="text" id="username" [(ngModel)]="credentials.username" name="username" required placeholder="Enter your username">
+                    <mat-icon matSuffix>person_outline</mat-icon>
+                    <mat-error *ngIf="loginForm.controls['username'].hasError('required')">Username is required</mat-error>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline" class="full-width">
+                    <mat-label>Password</mat-label>
+                    <input matInput type="password" id="password" [(ngModel)]="credentials.password" name="password" required placeholder="Enter your password">
+                    <mat-icon matSuffix>lock_outline</mat-icon>
+                    <mat-error *ngIf="loginForm.controls['password'].hasError('required')">Password is required</mat-error>
+                </mat-form-field>
+
+                <button mat-raised-button color="primary" type="submit" class="full-width" [disabled]="!loginForm.form.valid">Login</button>
+                
+            </form>
+        </mat-card-content>
+
+        <mat-card-actions>
+            <button mat-button routerLink="/signup">Create new account</button>
+            <button mat-button class="forgot-password">Forgot Password?</button>
+        </mat-card-actions>
+
+    </mat-card>
+</div>

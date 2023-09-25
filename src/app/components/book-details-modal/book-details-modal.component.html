@@ -1,0 +1,27 @@
+<!-- Title -->
+<h2 mat-dialog-title style="font-weight: 600; color: #333; border-bottom: 2px solid #eee; padding-bottom: 8px;">
+  {{book?.title}}
+</h2>
+
+<!-- Content -->
+<mat-dialog-content style="font-size: 16px; padding: 16px;">
+
+  <!-- Author -->
+  <div style="display: flex; align-items: center; margin-bottom: 12px;">
+    <mat-icon aria-hidden="false" aria-label="Author icon">person</mat-icon>
+    <span style="margin-left: 8px;"><strong>Author:</strong> {{book?.author}}</span>
+  </div>
+  
+  <!-- Year -->
+  <div style="display: flex; align-items: center;">
+    <mat-icon aria-hidden="false" aria-label="Calendar icon">calendar_today</mat-icon>
+    <span style="margin-left: 8px;"><strong>Year:</strong> {{book?.year}}</span>
+  </div>
+
+</mat-dialog-content>
+
+<!-- Actions -->
+<mat-dialog-actions style="display: flex; justify-content: center;">
+  <button mat-raised-button color="primary" mat-dialog-close>Close</button>
+</mat-dialog-actions>
+

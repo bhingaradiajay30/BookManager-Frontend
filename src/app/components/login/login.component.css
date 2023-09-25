@@ -1,0 +1,60 @@
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(80vh - 100px);
+    padding: 20px;
+    background-color: #ffffff;
+}
+
+.login-panel, .signup-panel {
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    border-radius: 8px;
+    background-color: #f0f0f0; 
+    padding: 20px; 
+    transition: box-shadow 0.3s ease-in-out; 
+}
+
+.green-snackbar {
+    background-color: green;
+}
+
+.error-snackbar {
+    background-color: red;
+}
+
+.login-panel:hover, .signup-panel:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.full-width {
+    width: 100%;
+    margin-bottom: 20px; 
+}
+
+.mat-card-actions {
+    justify-content: space-between;
+}
+
+.forgot-password {
+    margin-left: auto;
+}
+
+.mat-form-field.mat-focused .mat-form-field-label {
+    color: #6200ea;
+}
+
+.mat-form-field .mat-form-field-wrapper {
+    padding-bottom: 0;
+}
+
+button[mat-raised-button] {
+    padding: 10px 0; 
+    font-weight: bold; 
+}
+

@@ -1,0 +1,9 @@
+.mat-snack-bar-success {
+    background-color: #28a745;
+    color: #ffffff;
+}
+
+.mat-snack-bar-error {
+    background-color: #dc3545;
+    color: #ffffff;
+}

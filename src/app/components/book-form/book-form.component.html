@@ -1,0 +1,28 @@
+<form [formGroup]="bookForm" (ngSubmit)="onSubmit()" class="form-container">
+
+  <mat-form-field appearance="outline" class="full-width form-element">
+      <mat-label>Title</mat-label>
+      <input matInput formControlName="title" placeholder="E.g., To Kill a Mockingbird" required>
+      <mat-icon matSuffix>book</mat-icon>
+      <mat-error *ngIf="bookForm?.get('title')?.hasError('required')">Title is required!</mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline" class="full-width form-element">
+      <mat-label>Author</mat-label>
+      <input matInput formControlName="author" placeholder="E.g., Harper Lee" required>
+      <mat-icon matSuffix>person</mat-icon>
+      <mat-error *ngIf="bookForm?.get('author')?.hasError('required')">Author is required!</mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline" class="full-width form-element">
+      <mat-label>Year</mat-label>
+      <input matInput formControlName="year" placeholder="E.g., 1960" required>
+      <mat-icon matSuffix>event</mat-icon>
+      <mat-error *ngIf="bookForm?.get('year')?.hasError('required')">Year is required!</mat-error>
+  </mat-form-field>
+
+  <div class="button-container form-element">
+      <button mat-raised-button class="submit-btn" type="submit" [disabled]="!bookForm.valid">Submit</button>
+      <button mat-button (click)="closeDialog()" class="close-btn">Close</button>
+  </div>
+</form>
